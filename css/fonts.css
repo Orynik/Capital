@@ -1,0 +1,70 @@
+@font-face{
+    font-family: "MyriadPro-Regular";
+    src: url(../fonts/MyriadPro-Regular.otf) format("otf"),
+        url(../fonts/MyriadPro-Regular.eot) format("eot"),
+        url(../fonts/MyriadPro-Regular.ttf) format("ttf"),
+        url(../fonts/MyriadPro-Regular.woff) format("woff");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: "MyriadPro-Bold";
+    src: url(../fonts/MyriadPro-Bold.otf) format("otf"),
+        url(../fonts/MyriadPro-Bold.eot?) format("eot"),
+        url(../fonts/MyriadPro-Bold.ttf) format("ttf"),
+        url(../fonts/MyriadPro-Bold.woff) format("woff");
+    font-weight: normal;
+}
+
+:root{
+    --brown: #a75133;
+}
+
+.details{
+    color: var(--brown);
+}
+
+.details:hover{
+    opacity: 0.45;
+    color: var(--brown);
+}
+
+body{
+    font-family: "MyriadPro-Regular", sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.header-top > span:not(.phone){
+    font-family: "MyriadPro-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 24px; 
+    color: #4f5051;
+}
+
+.phone{
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4f5051;
+}
+
+.header-navbar-item > a{
+    color: #4f5051;
+}
+
+.header-navbar-item > a:hover{
+    color: #b34e2a;
+    text-decoration: underline;
+}
+
+.basket{
+    margin-left: 135px;
+    border-left: 1px solid #e1e2e2;
+}
+
+.count-items{
+    font-family: "MyriadPro-Regular", sans-serif;
+    font-size: 12px;
+    color: #fff;
+}
