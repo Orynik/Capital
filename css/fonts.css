@@ -58,13 +58,72 @@ body{
     text-decoration: underline;
 }
 
-.basket{
-    margin-left: 135px;
-    border-left: 1px solid #e1e2e2;
-}
-
 .count-items{
     font-family: "MyriadPro-Regular", sans-serif;
     font-size: 12px;
     color: #fff;
+}
+
+.title-price{
+    font-family: "MyriadPro-Bold";
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #4f5051;
+    text-align: center;
+    margin-top: 39px;
+}
+
+.input-group > label{
+    text-align: center;
+}
+
+.weight-item::placeholder{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    color: #666;
+    opacity: 0.4;
+}
+
+.input-group > label{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    color: #666;
+}
+
+.gold-title,
+.silver-title{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    line-height: 24px;
+    color: #666;
+}
+
+.gold-button,
+.silver-button{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    line-height: 24px;
+    color: #666;
+}
+
+.quality{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    line-height: 24px;
+    color: #666;
+}
+
+.result-text{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    line-height: 24px;
+    color: #666;
+}
+
+.result{
+    font-family: "MyriadPro-Bold";
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--brown);
 }
