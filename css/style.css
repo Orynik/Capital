@@ -167,6 +167,7 @@ a{
 .calc-buttons .gold-button,
 .calc-buttons .silver-button
 {
+    background-color: #fff;
     height: 48px;
     width: 72px;
     border: 1px solid #e4e6ed;
@@ -179,18 +180,6 @@ a{
     box-shadow: 0px 1px 5px -2px RGBA(0,0,0,0.3);
 }
 
-.calc-buttons .gold-button:hover,
-.calc-buttons .silver-button:hover{
-    outline:0;
-    border-color: #80bdff;
-    box-shadow: -1px 0px 4px 1px rgba(0, 123, 255, 0.25);
-}
-
-.calc-buttons .gold-button:active,
-.calc-buttons .silver-button:active{
-    background-color: #e6e6e6;
-    border: 1px solid #adadad;
-}
 .gold-title,
 .silver-title{
     float: left;
@@ -210,6 +199,7 @@ a{
 }
 
 .quality{
+    background-color: #fff;
     margin-bottom: 30px;
     float: left;
     width: 100%;
@@ -224,6 +214,11 @@ a{
     box-shadow: 0px 1px 5px -2px RGBA(0,0,0,0.3);
 }
 
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+}
 .value{
     width: 100%;
     border-top: 1px solid #e4e6ed;
