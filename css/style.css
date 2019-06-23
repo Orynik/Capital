@@ -379,6 +379,10 @@ border-radius: 50%;
     left: -20px;
 }
 
+.steps-work .step:first-child::before{
+    content: none;
+}
+
 .fixed{
     padding-top: 7px;
 }
