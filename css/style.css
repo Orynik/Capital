@@ -340,10 +340,12 @@ border-radius: 50%;
 
 .slider-panel-latest{
     position: absolute;
-    top: 800px;
-    right: 0;
-    left: 1150px;
-    float: right;
+    right: -25px;
+    top: -118px;
+}
+
+.items{
+    position: relative;
 }
 
 .prew:hover,
