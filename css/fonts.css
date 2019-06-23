@@ -127,3 +127,28 @@ body{
     line-height: 24px;
     color: var(--brown);
 }
+
+.title-latest{
+    font-family: "MyriadPro-Bold";
+    font-size: 36px;
+    line-height: 24px;
+}
+
+.goods{
+    font-family: "MyriadPro-Regular";
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.title-item{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.sample{
+    font-family: "MyriadPro-Regular";
+    font-size: 14px;
+    line-height: 24px;
+    color: #ccc;
+}
