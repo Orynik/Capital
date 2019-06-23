@@ -228,3 +228,137 @@ a{
 .result-text{
     margin-left: 80px;
 }
+
+.next,
+.prew{
+width: 50px;
+height: 50px;
+font-size: 14px;
+margin: 10px;
+padding: 19px 19px;
+display: inline-block;
+cursor: pointer;
+border: 1px solid #a75133;
+border-radius: 50%;
+}
+
+.prew::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #a75133;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    padding: 4px;
+}
+.next::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #a75133;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+    padding: 4px;
+}
+
+.slider-panel{
+    position: absolute;
+    float: left;
+    top: 600px;
+    margin-left: 15px;
+}
+
+.latest-items{
+    margin: 90px 32px;
+    align-items: center;
+}
+
+.goods{
+    padding-top: 5px; /*Выравнивание */
+    margin-left: 50px;
+    align-items: baseline;
+}
+
+.items-wrapper{
+    border: 1px solid #e4e6ed;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.items-wrapper{
+    width: 227px;
+    padding-top: 40px;
+}
+
+.item img{
+    margin: 3.5px 48.5px;
+}
+
+.title-item,
+.sample{
+    text-align: center;
+}
+
+.title-item{
+    margin-top: 25px;
+    margin-bottom: 2px;
+}
+
+.sample{
+    margin-bottom: 30px;
+}
+
+.text-items{
+    margin-bottom: 60px;
+}
+
+.slider-panel-latest{
+    position: absolute;
+    top: 800px;
+    margin-left: 1015px;
+    float: right;
+}
+
+.prew:hover,
+.next:hover,
+.next:hover::before,
+.prew:hover::before{
+    border-color: #f19b19;
+}
+
+.prew.disabled,
+.next.disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+/*Для заблокированных кнопок*/
+.prew.disabled:hover,
+.prew.disabled:hover::before,
+.next.disabled,
+.next.disabled:hover,
+.next.disabled:hover::before{ 
+    border-color: #a75133;
+}
