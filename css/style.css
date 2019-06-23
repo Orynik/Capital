@@ -8,6 +8,10 @@
     display: none;
 }
 
+body{
+    height: 100%;
+}
+
 header{
     margin-bottom: 26px;
     width: 1200px;
@@ -20,7 +24,7 @@ header{
 }
 
 a{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .header-top-wrap{
@@ -393,4 +397,52 @@ border-radius: 50%;
 
 .how-we-work-title{
     margin-left: 15px;
+}
+
+.how-we-work{
+    margin-bottom: 80px;
+}
+
+.about-us-title{
+    margin-bottom: 72px; 
+}
+
+.about-us-description{
+    margin-bottom: 41px;
+}
+
+.about-us{
+    margin-bottom: 85px;
+}
+
+.main-footer{
+    background-color: #f2f1f1;
+}
+
+.main-footer .nav{
+    flex-direction: row;
+    width: 50%;
+    float: left;
+}
+
+.main-footer .right-reserved {
+    margin-top: 10px;
+}
+
+.main-footer{
+    min-height: 79px;
+    border: 1px solid #e4e6ed;
+    padding-top: 20px;
+}
+
+.main-footer  .nav  .footer-navbar-item:first-child{
+    margin: 0px 17px 0 0px;
+}
+
+.main-footer  .nav  .footer-navbar-item{
+    margin: 0px 17px 0 17px;
+}
+
+.right-reserved{
+    text-align: right;
 }

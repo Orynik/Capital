@@ -22,6 +22,7 @@
 
 .details{
     color: var(--brown);
+    text-decoration: underline;
 }
 
 .details:hover{
@@ -49,11 +50,13 @@ body{
     color: #4f5051;
 }
 
-.header-navbar-item > a{
+.header-navbar-item > a,
+.footer-navbar-item > a{
     color: #4f5051;
 }
 
-.header-navbar-item > a:hover{
+.header-navbar-item > a:hover,
+.footer-navbar-item > a:hover{
     color: #b34e2a;
     text-decoration: underline;
 }
@@ -163,5 +166,21 @@ body{
     font-family: "MyriadPro-Bold";
     font-size: 36px;
     line-height: 24px;
+    color: #666;
+}
+
+.about-us-title{
+    font-family: "MyriadPro-Bold";
+    font-size: 36px;
+    line-height: 24px;
+    color: #666;
+}
+
+.about-us-description{
+    line-height: 28px;
+    color: #666;
+}
+
+.right-reserved{
     color: #666;
 }
