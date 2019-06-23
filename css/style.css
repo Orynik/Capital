@@ -337,7 +337,8 @@ border-radius: 50%;
 .slider-panel-latest{
     position: absolute;
     top: 800px;
-    margin-left: 1015px;
+    right: 0;
+    left: 1150px;
     float: right;
 }
 
