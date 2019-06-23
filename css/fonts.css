@@ -152,3 +152,16 @@ body{
     line-height: 24px;
     color: #ccc;
 }
+
+.text-step{
+    text-align: center;
+    line-height: 28px;
+    color: #666;
+}
+
+.how-we-work-title{
+    font-family: "MyriadPro-Bold";
+    font-size: 36px;
+    line-height: 24px;
+    color: #666;
+}
