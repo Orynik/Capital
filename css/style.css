@@ -112,7 +112,7 @@ a{
     box-shadow: 0px 0px 7px 0px RGBA(0,0,0,0.3);
 }
 
-.slide-1{
+.slide{
     width: 655px;
     margin-left: 20px;
     margin-top: 20px
@@ -235,15 +235,15 @@ a{
 
 .next,
 .prew{
-width: 50px;
-height: 50px;
-font-size: 14px;
-margin: 10px;
-padding: 19px 19px;
-display: inline-block;
-cursor: pointer;
-border: 1px solid #a75133;
-border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 19px 19px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #a75133;
+    border-radius: 50%;
 }
 
 .prew::before{
@@ -423,7 +423,6 @@ border-radius: 50%;
 
 .main-footer .nav{
     flex-direction: row;
-    width: 50%;
     float: left;
 }
 
@@ -447,4 +446,63 @@ border-radius: 50%;
 
 .right-reserved{
     text-align: right;
+}
+
+/* Адаптив на lg */
+@media (max-width:1199px){
+    .phone{
+        margin-left: 20px;
+    }
+
+    .time-work{
+        margin-left: 20px;
+    }
+
+    .header-nav .header-navbar-item >a{
+        margin-left: 0px;
+    }
+
+    .header-nav .header-navbar-item:first-child > a{
+        margin-left: 66px;
+    }
+
+    .header-nav .header-navbar-item:last-child > a{
+        margin-left: 50px;
+    }
+
+    .basket{
+        margin-right: 50px;
+        margin-left: 0;
+    }
+
+    .header-nav{
+        justify-content: space-between;
+    }
+
+    .our-price-tag{
+        height: 510px;
+    }
+
+    .slide{
+        width: 457px;
+        margin-left: 15px;
+        margin-top: 40px;
+    }
+
+    .calculator{
+        margin-top: 15px;
+    }
+
+    .slider-panel{
+        top:566px;
+    }
+
+    .items > .items-wrapper:first-child{
+        display: none;
+    }
+
+    .step-img{
+        margin-left: 40px;
+        margin-right: 42px;
+    }
 }

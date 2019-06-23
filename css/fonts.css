@@ -185,3 +185,7 @@ body{
 .right-reserved{
     color: #666;
 }
+.header-navbar-item{
+    font-size: 17px;
+    line-height: 24px; 
+}
