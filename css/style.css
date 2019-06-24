@@ -18,6 +18,10 @@ header{
     box-shadow: 0px 0px 6px 0px RGBA(0,0,0,0.3);
 }
 
+.header-bottom-md{
+    display: none;
+}
+
 .main-header > .header-top-wrap,
 .main-header > .header-bottom-wrap{
     margin: 0px -15px 0 -15px;
@@ -45,7 +49,7 @@ a{
     margin-left: 113px;
 }
 
-.ico{
+.ico-location{
     float: left;
     margin-top: 6px;
     width: 9px;
@@ -108,7 +112,7 @@ a{
 
 .our-price-tag{
     background-color: #f8f8fa;
-    height: 596px;
+    min-height: 596px;
     box-shadow: 0px 0px 7px 0px RGBA(0,0,0,0.3);
 }
 
@@ -449,6 +453,7 @@ a{
 }
 
 /* Адаптив на lg */
+
 @media (max-width:1199px){
     .phone{
         margin-left: 20px;
@@ -480,7 +485,7 @@ a{
     }
 
     .our-price-tag{
-        height: 510px;
+        min-height: 510px;
     }
 
     .slide{
@@ -497,7 +502,7 @@ a{
         top:566px;
     }
 
-    .items > .items-wrapper:first-child{
+    .items > .items-wrapper:first-child{ /*Заменить, иначе не будет работать слайдер*/
         display: none;
     }
 
@@ -506,3 +511,89 @@ a{
         margin-right: 42px;
     }
 }
+
+@media (max-width:991px){
+    .header-top{
+        margin-top: 1px;
+    }
+
+    .time-work{
+        display: none;
+    }
+
+    .header-bottom{
+        display: none;
+    }
+
+    .header-bottom-md{
+        display: block;
+    }
+
+    .navbar-toggler-icon{
+        content: url(../img/menu.png);
+        width: 24px;
+        height: 18px;
+    }
+
+    .wrapper{
+        margin-top: 13px;
+    }
+
+    .mobail-menu{
+        margin-left: 10px;
+    }
+
+    .ico-basket{
+        margin-left: 84px;
+    }
+
+    .basket{
+        margin: 0;
+    }
+
+    .wrapper .navbar-toggler-icon{
+        margin-left: 131px;
+    }
+
+    .slide{
+        margin-top: 0px;
+        width: 100%;
+        height: 500px;
+    }
+
+    .calculator{
+        margin-bottom: 20px;
+    }
+
+    .items > .items-wrapper:nth-child(4){ /*Заменить, иначе не будет работать слайдер*/
+        display: none;
+    }
+
+    .title-latest{
+        width: 260px;
+    }
+
+    .step:nth-child(3)::before{
+        content: "";
+    }
+
+    .step-img{
+        margin: 42px 40px 42px 72px;
+    }
+}
+
+
+    .slide {
+        position: absolute;
+        width: 100%; 
+        height: 100%; 
+        transition: all 1s ease-in 0.1s; 
+        left:0;
+    }
+	.slide img {
+        width: 100%;
+    }
+	.arrows {position: relative; margin: 0 auto; width: 600px;}
+	.arrow {position: absolute; cursor: pointer;}
+	.no_active {color: red;}
+    .next {right: 0;}

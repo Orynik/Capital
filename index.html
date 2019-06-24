@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class = "container main-header">
+    <header class = "container main-header ">
         <div class = "header-top-wrap">
           <div class = "header-top">
-            <img class = "ico" src = "img/location.png">
+            <img class = "ico-location" src = "img/location.png">
             <span class = "location">Усолье-Сибирское, ул.Менделеева, д.42 <a class = "details" href = "#"> выбрать отделение</a></span>
             <span class = "phone">+7 (999) 147 14 14</span>
             <span class = "time-work">Режим работы: пн.-пт. с 10:00 до 19:00</span>
           </div>  
         </div>
         <div class = "header-bottom-wrap">
-          <div class = "header-bottom">
-            <a class = "header-logo" href = "#">
+          <a class = "header-logo" href = "#">
               <img class = "logo" src = "img/logo.png" width = "110" height = "86">
-            </a>
-            <ul class = "header-nav navbar-nav navbar-toggler flex-row">
+          </a>
+          <div class = "header-bottom">
+            <ul class = "header-nav navbar-nav flex-row">
               <li class = "header-navbar-item navbar-item"><a href = "#">О нас</a></li>
               <li class = "header-navbar-item navbar-item"><a href = "#">Каталог</a></li>
               <li class = "header-navbar-item navbar-item"><a href = "#">Тарифы</a></li>
@@ -32,6 +32,19 @@
               <li class = "header-navbar-item navbar-item"><a href = "#">Контакты</a></li>
               <li class = "header-navbar-item basket"><a href = "#">Корзина<span class = "count-items">3</span></a></li>
             </ul>
+          </div>
+          <div class = "header-bottom-md">
+            <div class="wrapper">
+              <button class="navbar-toggler col-md-9" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span><span class = "mobail-menu">Меню</span>
+              </button>
+              <span class = "basket сol-md-3">
+                <a href = "#">
+                  <img class = "ico-basket" src = "img/basket.png">
+                  <span class = "count-items">3</span>
+                </a>
+              </span>
+            </div>
           </div>
         </div>
     </header>
@@ -138,7 +151,7 @@
         <section class = "how-we-work сontainer">
           <h4 class = "how-we-work-title">Как мы работаем</h4>
           <section class = "steps-work row">
-            <div class = "step col-lg-3">
+            <div class = "step col-lg-3 col-md-6">
               <img class = "step-img" alt = "Деньги" src = "img/time-money.png">
               <p class = "text-step">
                 Вам срочно нужны деньги 
@@ -147,7 +160,7 @@
                 которое вы могли бы заложить.
               </p>
             </div>
-            <div class = "step col-lg-3">
+            <div class = "step col-lg-3 col-md-6">
               <img class = "step-img" alt = "Ломбард" src = "img/pawnshop.png">
               <p class = "text-step">
                 Вы обращаетесь в наш ломбард,
@@ -157,7 +170,7 @@
                 процент на 30 дней
               </p>
             </div>
-            <div class = "step col-lg-3">
+            <div class = "step col-lg-3 col-md-6">
               <img class = "step-img" alt = "list" src = "img/list.png">
               <p class = "text-step">
                 Если вас устраивают наши
@@ -167,7 +180,7 @@
                 ювилирное изделие 
               </p>
             </div>
-            <div class = "step col-lg-3">
+            <div class = "step col-lg-3 col-md-6">
               <img class = "step-img" alt = "Украшение" src = "img/jewel.png">
               <p class = "text-step fixed">
                 Через 30 дней вы возвращаете
@@ -213,5 +226,41 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        var next = document.getElementById('next');
+        var prew = document.getElementById('prew');
+        
+        var slides = document.getElementsByClassName('slide');
+        for(var i=0; i<slides.length; i++) {
+           slides[i].style.zIndex = slides.length - i;
+        }
+        
+        next.onclick = function () {
+            var activeEl = document.querySelector('.active');
+            if(activeEl.nextElementSibling) {
+               activeEl.style.left = "-100%";
+               activeEl.classList.remove('active');
+               activeEl.nextElementSibling.classList.add('active');
+               this.classList.remove('no_active');
+               prew.classList.remove('no_active');
+               if(!activeEl.nextElementSibling.nextElementSibling) {
+                  this.classList.add('no_active');
+               }
+            }
+        }
+        prew.onclick = function () {
+            var activeEl = document.querySelector('.active');
+            if(activeEl.previousElementSibling) {
+               activeEl.previousElementSibling.style.left = "0%";
+               activeEl.classList.remove('disabled');
+               activeEl.previousElementSibling.classList.add('disabled');
+               this.classList.remove('disabled');
+               next.classList.remove('disabled');
+               if(!activeEl.previousElementSibling.previousElementSibling) {
+                  this.classList.add('disabled');
+               }
+            }
+        }
+        </script>
 </body>
 </html>
