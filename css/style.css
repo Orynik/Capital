@@ -72,6 +72,10 @@ a{
     height: 66px;
 }
 
+.wrapper-xl{
+    height: 35px;
+}
+
 .header-nav{
     padding: 22px 0px 25px 100px;
 }
@@ -636,8 +640,16 @@ a{
         min-width: 100%;
     }
 
+    .phone{
+        display: none;
+    }
+
+    .location{
+        margin-top: 7px;
+    }
+
     .header-top .details{
-        margin-left: 20px;
+        margin-top: 6px;
     }
 
     .ico-basket{
@@ -679,18 +691,6 @@ a{
     }
 }
 
-@media(max-width: 708px){
-    .phone{
-        display: none;
-    }
-
-    .location{
-        margin-top: 0px;
-        height: 24px;
-        overflow: hidden;
-    }
-}
-
 @media(max-width: 627px){
     .step-img{
         margin: 42px 40px 42px 63px;
@@ -705,12 +705,12 @@ a{
         overflow: visible;
     }
 
-    .header-top .details{
+    /* .header-top .details{
         margin-left: 0px;
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 8px;
-    }
+    } */
 
     .ico-basket{
         margin-left: 32px;
