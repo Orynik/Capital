@@ -22,6 +22,11 @@ header{
     display: none;
 }
 
+.header-bottom{
+    margin-top: -25px;
+    height: 68px;
+}
+
 .main-header > .header-top-wrap,
 .main-header > .header-bottom-wrap{
     margin: 0px -15px 0 -15px;
@@ -38,6 +43,7 @@ a{
 }
 
 .header-top{
+    height: 40px;
     padding: 6px 0px 10px 169px;
 }
 
@@ -541,10 +547,6 @@ a{
 }
 
 @media (max-width:991px){
-    .header-top{
-        margin-top: 1px;
-    }
-
     .time-work{
         display: none;
     }
@@ -555,16 +557,19 @@ a{
 
     .header-bottom-md{
         display: block;
+        margin-top: -38px;
+        height: 68px;
     }
 
     .navbar-toggler-icon{
         content: url(../img/menu.png);
         width: 24px;
         height: 18px;
+        margin-top: -5px;
     }
 
     .wrapper{
-        margin-top: 13px;
+        padding-top: 29px;
     }
 
     .mobail-menu{
@@ -627,3 +632,84 @@ a{
     }
 }
 
+@media (max-width:767px){
+    /* !!!!!!!!!!!!!!!!!!! */
+    .main-header,
+    .wraper-sm{
+        min-width: 100%;
+    }
+
+    .location .details{
+        margin-left: 20px;
+    }
+
+    .ico-basket{
+        margin-left: 58px;
+        padding-left: 4px;
+        margin-top: -5px;
+    }
+
+    .ico-location{
+        margin-top: 8px;
+    }
+
+    .slider-md-wrap{
+        margin-left: 31px;
+    }
+
+    .title-latest{
+        margin-left: -62px;
+    }
+
+    .slider-panel-latest{
+        top: -127px;
+        right: -90px;
+    }
+
+    .how-we-work-title{
+        text-align: center;
+        margin:0;
+    }
+
+    .step-img{
+        margin: 42px 40px 42px 105px;
+    }
+
+    .step::before{
+        top: 53px;
+        left: -10px;
+    }
+
+    .step-img:nth-child(4){
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+
+    .value{
+        text-align: center;
+    }
+}
+
+@media(max-width: 708px){
+    .phone{
+        display: none;
+    }
+
+    .location{
+        margin-top: 0px;
+        height: 24px;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 627px){
+    .step-img{
+        margin: 42px 40px 42px 63px;
+    }
+    .goods{
+        margin-left: 25px;
+    }
+    .slider-panel-latest{
+        right: -59px;
+    }
+}

@@ -39,13 +39,14 @@ body{
 .header-top > span:not(.phone){
     font-family: "MyriadPro-Regular", sans-serif;
     font-size: 14px;
-    line-height: 24px; 
+    line-height: 28px; 
     color: #4f5051;
 }
 
 .phone{
     font-family: "MyriadPro-Bold", sans-serif;
     font-size: 14px;
+    line-height: 28px;
     font-weight: 500;
     color: #4f5051;
 }
