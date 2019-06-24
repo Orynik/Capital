@@ -48,6 +48,10 @@ a{
     margin-top: 4px;
 }
 
+.header-top .details{
+    margin-left: 9px;
+}
+
 .phone{
     margin-left: 125px;
 }
@@ -66,7 +70,6 @@ a{
 .location{
     float: left;
     padding-left: 10px;
-    margin-left: 9px;
 }
 
 .header-bottom-wrap{
