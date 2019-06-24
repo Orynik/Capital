@@ -18,6 +18,15 @@ header{
     box-shadow: 0px 0px 6px 0px RGBA(0,0,0,0.3);
 }
 
+.header-bottom-md{
+    display: none;
+}
+
+.header-bottom{
+    margin-top: -25px;
+    height: 68px;
+}
+
 .main-header > .header-top-wrap,
 .main-header > .header-bottom-wrap{
     margin: 0px -15px 0 -15px;
@@ -34,6 +43,7 @@ a{
 }
 
 .header-top{
+    height: 40px;
     padding: 6px 0px 10px 169px;
 }
 
@@ -45,7 +55,7 @@ a{
     margin-left: 113px;
 }
 
-.ico{
+.ico-location{
     float: left;
     margin-top: 6px;
     width: 9px;
@@ -86,7 +96,7 @@ a{
 }
 
 .basket{
-    margin-left: 100px;
+    margin-left: 122px;
     border-left: 1px solid #e1e2e2;
 }
 
@@ -108,11 +118,11 @@ a{
 
 .our-price-tag{
     background-color: #f8f8fa;
-    height: 596px;
+    min-height: 596px;
     box-shadow: 0px 0px 7px 0px RGBA(0,0,0,0.3);
 }
 
-.slide-1{
+.slide{
     width: 655px;
     margin-left: 20px;
     margin-top: 20px
@@ -235,15 +245,15 @@ a{
 
 .next,
 .prew{
-width: 50px;
-height: 50px;
-font-size: 14px;
-margin: 10px;
-padding: 19px 19px;
-display: inline-block;
-cursor: pointer;
-border: 1px solid #a75133;
-border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 19px 19px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #a75133;
+    border-radius: 50%;
 }
 
 .prew::before{
@@ -286,7 +296,7 @@ border-radius: 50%;
 .slider-panel{
     position: absolute;
     float: left;
-    top: 600px;
+    top: 505px;
     margin-left: 15px;
 }
 
@@ -355,19 +365,16 @@ border-radius: 50%;
     border-color: #f19b19;
 }
 
-.prew.disabled,
-.next.disabled{
+.disabled{
     opacity: 0.5;
     cursor: default;
+    border-color: #a75133;
 }
 
-/*Для заблокированных кнопок*/
-.prew.disabled:hover,
-.prew.disabled:hover::before,
-.next.disabled,
-.next.disabled:hover,
-.next.disabled:hover::before{ 
+.disabled:hover,
+.disabled:hover::before{
     border-color: #a75133;
+    color: inherit;
 }
 
 .step-img{
@@ -423,7 +430,6 @@ border-radius: 50%;
 
 .main-footer .nav{
     flex-direction: row;
-    width: 50%;
     float: left;
 }
 
@@ -447,4 +453,263 @@ border-radius: 50%;
 
 .right-reserved{
     text-align: right;
+}
+
+/* Слайдер */
+
+#slider {
+    position: relative; 
+    overflow: hidden;
+    width: 100%; 
+    height: 100%; 
+    padding: 0; 
+    list-style: none;
+}
+.slide {
+    position: absolute; 
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: all 1s ease-in 0.1s; 
+    left:0;
+}
+
+.slide img{
+    width: 630px; 
+    height: 493px; 
+}
+.arrows {
+    position: absolute;
+    float: left;
+    /* top: 600px; */
+    margin-left: 15px;
+}
+
+/* Адаптив на lg */
+
+@media (max-width:1199px){
+    .phone{
+        margin-left: 20px;
+    }
+
+    ul .slide  img {
+        margin-left: -15px;
+        margin-top: -5px;
+
+        width: 431px;
+        height: 362px;
+    }
+
+    .slider-panel {
+        top: 421px;
+    }
+
+    .time-work{
+        margin-left: 20px;
+    }
+
+    .header-nav .header-navbar-item >a{
+        margin-left: 0px;
+    }
+
+    .header-nav .header-navbar-item:first-child > a{
+        margin-left: 66px;
+    }
+
+    .header-nav .header-navbar-item:last-child > a{
+        margin-left: 50px;
+    }
+
+    .basket{
+        margin-right: 50px;
+        margin-left: 0;
+    }
+
+    .header-nav{
+        justify-content: space-between;
+    }
+
+    .our-price-tag{
+        min-height: 510px;
+    }
+
+    .calculator{
+        margin-top: 15px;
+    }
+
+    .items > .items-wrapper:first-child{ /*Заменить, иначе не будет работать слайдер*/
+        display: none;
+    }
+
+    .step-img{
+        margin-left: 40px;
+        margin-right: 42px;
+    }
+}
+
+@media (max-width:991px){
+    .time-work{
+        display: none;
+    }
+
+    .header-bottom{
+        display: none;
+    }
+
+    .header-bottom-md{
+        display: block;
+        margin-top: -38px;
+        height: 68px;
+    }
+
+    .navbar-toggler-icon{
+        content: url(../img/menu.png);
+        width: 24px;
+        height: 18px;
+        margin-top: -5px;
+    }
+
+    .wrapper{
+        padding-top: 29px;
+    }
+
+    .mobail-menu{
+        margin-left: 10px;
+    }
+
+    .ico-basket{
+        margin-left: 84px;
+    }
+
+    .basket{
+        margin: 0;
+    }
+
+    .wrapper .navbar-toggler-icon{
+        margin-left: 131px;
+    }
+
+    .slider-md-wrap{
+        min-height: 450px;
+        margin-left: 62px;
+    }
+
+    ul li.slide img{
+        width: 582px;
+        height: 412px;
+    }
+
+    .slider-panel {
+        top: 339px;
+        z-index: 99;
+    }
+
+    .calculator{
+        margin-bottom: 20px;
+    }
+
+    .items > .items-wrapper:nth-child(4){ /*Заменить, иначе не будет работать слайдер*/
+        display: none;
+    }
+
+    .title-latest{
+        width: 260px;
+    }
+
+    .step:nth-child(3)::before{
+        content: "";
+    }
+
+    .step-img{
+        margin: 42px 40px 42px 97px;
+    }
+
+    .main-footer .nav .footer-navbar-item {
+        margin: 0px 17px 0 -5px;
+    }
+
+    .main-footer .right-reserved {
+        margin-top: -3px;
+    }
+}
+
+@media (max-width:767px){
+    /* !!!!!!!!!!!!!!!!!!! */
+    .main-header,
+    .wraper-sm{
+        min-width: 100%;
+    }
+
+    .location .details{
+        margin-left: 20px;
+    }
+
+    .ico-basket{
+        margin-left: 58px;
+        padding-left: 4px;
+        margin-top: -5px;
+    }
+
+    .ico-location{
+        margin-top: 8px;
+    }
+
+    .slider-md-wrap{
+        margin-left: 31px;
+    }
+
+    .title-latest{
+        margin-left: -62px;
+    }
+
+    .slider-panel-latest{
+        top: -127px;
+        right: -90px;
+    }
+
+    .how-we-work-title{
+        text-align: center;
+        margin:0;
+    }
+
+    .step-img{
+        margin: 42px 40px 42px 105px;
+    }
+
+    .step::before{
+        top: 53px;
+        left: -10px;
+    }
+
+    .step-img:nth-child(4){
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+
+    .value{
+        text-align: center;
+    }
+}
+
+@media(max-width: 708px){
+    .phone{
+        display: none;
+    }
+
+    .location{
+        margin-top: 0px;
+        height: 24px;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 627px){
+    .step-img{
+        margin: 42px 40px 42px 63px;
+    }
+    .goods{
+        margin-left: 25px;
+    }
+    .slider-panel-latest{
+        right: -59px;
+    }
 }

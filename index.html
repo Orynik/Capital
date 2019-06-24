@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class = "container main-header">
+    <header class = "container main-header ">
         <div class = "header-top-wrap">
           <div class = "header-top">
-            <img class = "ico" src = "img/location.png">
+            <img class = "ico-location" src = "img/location.png">
             <span class = "location">Усолье-Сибирское, ул.Менделеева, д.42 <a class = "details" href = "#"> выбрать отделение</a></span>
             <span class = "phone">+7 (999) 147 14 14</span>
             <span class = "time-work">Режим работы: пн.-пт. с 10:00 до 19:00</span>
           </div>  
         </div>
         <div class = "header-bottom-wrap">
-          <div class = "header-bottom">
-            <a class = "header-logo" href = "#">
+          <a class = "header-logo navbar-brand" href = "#">
               <img class = "logo" src = "img/logo.png" width = "110" height = "86">
-            </a>
-            <ul class = "header-nav navbar-nav navbar-toggler flex-row justify-content-start">
+          </a>
+          <div class = "header-bottom">
+            <ul class = "header-nav navbar-nav flex-row">
               <li class = "header-navbar-item navbar-item"><a href = "#">О нас</a></li>
               <li class = "header-navbar-item navbar-item"><a href = "#">Каталог</a></li>
               <li class = "header-navbar-item navbar-item"><a href = "#">Тарифы</a></li>
@@ -33,22 +33,39 @@
               <li class = "header-navbar-item basket"><a href = "#">Корзина<span class = "count-items">3</span></a></li>
             </ul>
           </div>
+          <div class = "header-bottom-md">
+            <div class="wrapper">
+              <button class="navbar-toggler  col-sm-9" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span><span class = "mobail-menu">Меню</span>
+              </button>
+              <span class = "basket сol-sm-3">
+                <a href = "#">
+                  <img class = "ico-basket" src = "img/basket.png">
+                  <span class = "count-items">3</span>
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
     </header>
     <main>
-      <div class="container">
+      <div class="container wraper-sm">
         <section class = "our-price-tag row">
-          <div class = "col-7">
-            <img class = "slide-1" src = "img/banner-1.jpg">
+          <div class = "col-xl-7 col-lg-6 col-md-12 slider-md-wrap">
+            <ul id = "slider">
+              <li class="slide active">
+                <img src="img/banner-1.jpg" alt="Баннер 1">
+              </li>
+              <li class="slide">
+                <img src="img/banner-2.jpg" alt="Баннер 2">
+              </li>
+            </ul>
+            <div class = "slider-panel">
+              <span id = "prew" class = "prew  disabled"></span>
+              <span id = "next" class = "next"></span>
+            </div>
           </div>
-          <div class = "col-7 visually-hidden">
-            <img class = "slide-1 visually-hidden" src = "img/banner-1.jpg">
-          </div>
-          <div class = "slider-panel">
-            <span class = "prew"></span>
-            <span class = "next"></span>
-          </div>
-          <div class = "col-5">
+          <div class = "col-xl-5 col-lg-6 col-md-12">
             <section class = "calculator">
               <div class = "calculator-content">
                 <h2 class = "title-price">Расчет суммы займа</h2>
@@ -88,7 +105,7 @@
       <div class="container">
         <section class="latest-items">
           <div class = "row text-items">
-            <h3 class = "title-latest">Последние поступления</h3>
+            <h3 class = "title-latest col-sm-6">Последние поступления</h3>
             <span class = "goods"><a href="#" class="details">Весь каталог</a></span>
           </div>
         <div class = "items">
@@ -134,11 +151,11 @@
         </div>
         </section>
       </div>
-      <div class = "container">
+      <div class = "container wraper-sm">
         <section class = "how-we-work сontainer">
           <h4 class = "how-we-work-title">Как мы работаем</h4>
           <section class = "steps-work row">
-            <div class = "step col-xl-3">
+            <div class = "step col-lg-3 col-6">
               <img class = "step-img" alt = "Деньги" src = "img/time-money.png">
               <p class = "text-step">
                 Вам срочно нужны деньги 
@@ -147,7 +164,7 @@
                 которое вы могли бы заложить.
               </p>
             </div>
-            <div class = "step col-xl-3">
+            <div class = "step col-lg-3 col-6">
               <img class = "step-img" alt = "Ломбард" src = "img/pawnshop.png">
               <p class = "text-step">
                 Вы обращаетесь в наш ломбард,
@@ -157,7 +174,7 @@
                 процент на 30 дней
               </p>
             </div>
-            <div class = "step col-xl-3">
+            <div class = "step col-lg-3 col-6">
               <img class = "step-img" alt = "list" src = "img/list.png">
               <p class = "text-step">
                 Если вас устраивают наши
@@ -167,7 +184,7 @@
                 ювилирное изделие 
               </p>
             </div>
-            <div class = "step col-xl-3">
+            <div class = "step col-lg-3 col-6">
               <img class = "step-img" alt = "Украшение" src = "img/jewel.png">
               <p class = "text-step fixed">
                 Через 30 дней вы возвращаете
@@ -179,7 +196,7 @@
           </section>
         </section>
       </div>
-      <div class = "container">
+      <div class = "container wraper-sm">
         <section class = "about-us">
           <h4 class = "about-us-title">О компании</h4>
           <p class = "about-us-description">
@@ -193,7 +210,7 @@
       </div>
     </main>
     <footer class = "main-footer">
-      <div class="container">
+      <div class="container wraper-sm">
         <div class = "right-reserved"> 
           <ul class = "nav navbar-nav">
             <li class="footer-navbar-item"><a href="#">О нас</a></li>
@@ -213,5 +230,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
