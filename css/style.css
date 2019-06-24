@@ -237,10 +237,7 @@ a{
     width: 100%;
     border-top: 1px solid #e4e6ed;
     padding:24px 0px;
-}
-
-.result-text{
-    margin-left: 80px;
+    text-align: center;
 }
 
 .next,
@@ -639,7 +636,7 @@ a{
         min-width: 100%;
     }
 
-    .location .details{
+    .header-top .details{
         margin-left: 20px;
     }
 
@@ -657,13 +654,9 @@ a{
         margin-left: 31px;
     }
 
-    .title-latest{
-        margin-left: -62px;
-    }
-
     .slider-panel-latest{
         top: -127px;
-        right: -90px;
+        right: -39px;
     }
 
     .how-we-work-title{
@@ -683,10 +676,6 @@ a{
     .step-img:nth-child(4){
         margin-top: 34px;
         margin-bottom: 34px;
-    }
-
-    .value{
-        text-align: center;
     }
 }
 
@@ -709,7 +698,42 @@ a{
     .goods{
         margin-left: 25px;
     }
-    .slider-panel-latest{
-        right: -59px;
+}
+
+@media(max-width: 575px){
+    .location{
+        overflow: visible;
+    }
+
+    .header-top .details{
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 8px;
+    }
+
+    .ico-basket{
+        margin-left: 32px;
+    }
+
+    .slider-md-wrap{
+        margin-left: -6px;
+    }
+
+    ul li.slide img {
+        width: 381px;
+        height: 342px;
+    }
+
+    .slider-panel{
+        left: 144px;
+    }
+
+    .items > .items-wrapper:nth-child(3){ /*Заменить, иначе не будет работать слайдер*/
+        display: none;
+    }
+
+    .step-img{
+        margin: 42px 40px 42px 42px;
     }
 }
