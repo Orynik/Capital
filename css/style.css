@@ -66,6 +66,7 @@ a{
 .location{
     float: left;
     padding-left: 10px;
+    margin-left: 9px;
 }
 
 .header-bottom-wrap{
