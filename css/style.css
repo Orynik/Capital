@@ -38,13 +38,14 @@ a{
 
 .header-top-wrap{
     background-color: #f2f1f1;
-    height: 41px;
+    height: 51px;
     border: 1px solid #e9e9e9;
 }
 
 .header-top{
     height: 40px;
     padding: 6px 0px 10px 169px;
+    margin-top: 4px;
 }
 
 .phone{
@@ -552,6 +553,22 @@ a{
         display: none;
     }
 
+    .header-top{
+        margin-top: 0px;
+    }
+
+    .header-top .details{
+        margin-left: 15px;
+    }
+
+    .wrapper-xl:not(.ico-location){
+        margin-top: 10px;
+    }
+
+    .ico-location{
+        margin-top: 2px;
+    }
+
     .header-bottom{
         display: none;
     }
@@ -645,11 +662,7 @@ a{
     }
 
     .location{
-        margin-top: 7px;
-    }
-
-    .header-top .details{
-        margin-top: 6px;
+        margin-top: 1px;
     }
 
     .ico-basket{
@@ -658,8 +671,8 @@ a{
         margin-top: -5px;
     }
 
-    .ico-location{
-        margin-top: 8px;
+    .ico-location {
+        margin-top: 3px;
     }
 
     .slider-md-wrap{
@@ -689,6 +702,10 @@ a{
         margin-top: 34px;
         margin-bottom: 34px;
     }
+
+    .header-top .details{
+        padding-left: 80px;
+    }
 }
 
 @media(max-width: 627px){
@@ -704,13 +721,6 @@ a{
     .location{
         overflow: visible;
     }
-
-    /* .header-top .details{
-        margin-left: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 8px;
-    } */
 
     .ico-basket{
         margin-left: 32px;
@@ -735,5 +745,9 @@ a{
 
     .step-img{
         margin: 42px 40px 42px 42px;
+    }
+
+    .copyright{
+        margin-left: 9px;
     }
 }
