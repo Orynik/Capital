@@ -44,8 +44,12 @@ a{
 
 .header-top{
     height: 40px;
-    padding: 6px 0px 10px 169px;
+    padding: 6px 0px 10px 180px;
     margin-top: 4px;
+}
+
+.header-top .details{
+    margin-left: 9px;
 }
 
 .phone{
