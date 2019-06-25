@@ -61,6 +61,7 @@ a{
 }
 
 .ico-location{
+    background-image: url(../img/location.png);
     float: left;
     margin-top: 6px;
     width: 9px;
