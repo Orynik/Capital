@@ -661,9 +661,10 @@ a{
     }
 
     .details-location{
-        width: 50%;
+        float: right;
+        display: block;
+        width: 51px;
         overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
     }
 
@@ -707,7 +708,7 @@ a{
     }
 
     .header-top .details{
-        padding-right: 8px;
+        margin-right: 15px;
     }
     
     .header-top{
@@ -779,13 +780,19 @@ a{
     }
 }
 
+@media(max-width: 332px){
+    .mobail-menu{
+        display: none;
+    }
+}
+
 /* Модальное окно */
 
 .modal {
 	margin: 30px auto;
 	width: 615px;
 	height: 449px;
-	top: -100%;
+	top: -120%;
 	right: 0;
 	background: #fff;
 	border: 1px solid #333;
