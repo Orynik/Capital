@@ -44,13 +44,14 @@ var overflow = document.createElement('div');
 var wrapper = document.querySelector('.wrapper');
 // !!!!
 var trigger = document.querySelector('.details-location');
-
 trigger.onclick = function () {
 	overflow.className = "overflow";
     document.body.appendChild(overflow);
 	modal.style.top = "0%";
 	wrapper.classList.add("wrapper_blur");
 }
+
+
 
 overflow.onclick = function () { //Клик вне области
     modal.style.top = "-100%";
