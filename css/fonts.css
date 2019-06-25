@@ -201,3 +201,19 @@ body{
     }
 }
 
+/* Шрифты для модального окна */
+
+.modal-title{
+    font-family: "MyriadPro-Bold";
+    font-size: 30px;
+	line-height: 24px;
+	color: #4f5051;
+}
+
+.modal a{
+    font-family: "MyriadPro-Regular";
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #a75133;
+}

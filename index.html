@@ -15,7 +15,8 @@
             <div class = "wrapper-xl row">
               <i class = "ico-location"></i>
               <span class = "location">Усолье-Сибирское, ул.Менделеева, д.42</span>
-              <a class = "details" href = "#"> выбрать отделение</a>
+              <a class = "details details-location hidden-es" href = "#"> выбрать отделение</a>
+              <a class = "details derails-location visibility visually-hidden" href = "#">Выбрать</a>
               <span class = "phone">+7 (999) 147 14 14</span>
               <span class = "time-work">Режим работы: пн.-пт. с 10:00 до 19:00</span>
             </div>
@@ -38,7 +39,7 @@
           </div>
           <div class = "header-bottom-md">
             <div class="wrapper">
-              <button class="navbar-toggler  col-9" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler col-9" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span><span class = "mobail-menu">Меню</span>
               </button>
               <span class = "basket сol-3">
@@ -108,7 +109,7 @@
       <div class="container wraper-sm">
         <section class="latest-items">
           <div class = "row text-items">
-            <h3 class = "title-latest col-12">Последние поступления</h3>
+            <h3 class = "title-latest">Последние поступления</h3>
             <span class = "goods"><a href="#" class="details">Весь каталог</a></span>
           </div>
         <div class = "items">
@@ -229,6 +230,27 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class = "modal-content">
+        <div class="modal-header">
+          <h4 class = "modal-title">Выберите ломбард</h4>
+          <span class="closeBtn">&times;</span>
+        </div>
+        <div class = "modal-body">
+          <h5 class = "modal-title text-left">Усолье-Сибирское</h5>
+          <div class="row row-a">
+            <a href="#" class = "col-lg-5">ул.Менделеева,д.42</a>
+            <a href="#" class = "col-lg-5">ул.Гагарина,д.154</a>
+            <a href="#" class = "col-lg-5">ул.Ленина,д.99</a>
+          </div>
+          <h5 class = "modal-title text-left">Черемхово</h5>
+          <div class="row row-a">
+            <a href="#" class = "col-lg-5">ул.Советская,д.11</a>
+            <a href="#" class = "col-lg-5">ул.Садовая,д.14</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="JS/script.js"></script>
     <!--Необходимый скрипт-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
