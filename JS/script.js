@@ -54,14 +54,14 @@ trigger.onclick = function () {
 }
 
 overflow.onclick = function () { //Клик вне области
-    modal.style.top = "-170%";
+    modal.style.top = "-150%";
 	wrapper.classList.remove("wrapper_blur"); //Удаление размытия
     overflow.remove();
     body.style.overflow = "scroll";
 }
 
 closeBtn.addEventListener('click', function(){ //Клик по кнопке закрытия
-	modal.style.top = "-170%";
+	modal.style.top = "-150%";
 	wrapper.classList.remove("wrapper_blur") //Удаление размытия
     overflow.remove();
     body.style.overflow = "scroll";
