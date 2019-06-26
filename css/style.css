@@ -330,6 +330,7 @@ a{
 .latest-items{
     margin: 90px 32px;
     align-items: center;
+    position: relative;
 }
 
 .goods{
@@ -379,8 +380,8 @@ a{
 
 .slider-panel-latest{
     position: absolute;
-    right: -25px;
-    top: -118px;
+    right: 0;
+    top: -27px;
 }
 
 .items{
@@ -587,6 +588,30 @@ a{
 	color: #a75133;
 }
 
+/* Слайдер поступлений */
+.slide-item,
+.items-wrapper{
+    width: 228px;
+    height: 300px;
+    float: left;
+    border-right: 1px solid #e4e6ed;
+    background-color: #fbfbfb;
+    border: solid 1px #e4e6ed;
+}
+
+.slider-out{
+    width: 1140px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-left: -32px;
+}
+
+.slider-items{
+    width: 1368px;
+    height: 100%;
+}
+
 /* Адаптив на lg */
 
 @media (max-width:1199px){
@@ -639,8 +664,8 @@ a{
         margin-top: 15px;
     }
 
-    .items > .items-wrapper:first-child{ /*Заменить, иначе не будет работать слайдер*/
-        display: none;
+    .slider-out{
+        width: 912px;
     }
 
 }
@@ -741,6 +766,9 @@ a{
     .modal{
         height: 550px;
     }
+    .slider-out{
+        width: 684px;
+    }
 }
 
 @media (max-width:767px){
@@ -776,12 +804,6 @@ a{
         margin-top: -5px;
     }
 
-
-    .slider-panel-latest{
-        top: -127px;
-        right: -39px;
-    }
-
     .how-we-work-title{
         text-align: center;
         margin:0;
@@ -801,6 +823,25 @@ a{
 
     .modal{
         width: 100%;
+    }
+
+    .slider-panel-latest{
+        right: 0;
+        left: 180px;
+        top: 420px;
+    }
+
+    .text-items{
+        margin-left: 21px;
+    }
+
+    .slider-out{
+        width: 456px;
+        margin-left: 24px;
+    }
+
+    .latest-items{
+        margin: 45px auto 113px auto;
     }
 }
 
@@ -911,5 +952,19 @@ a{
 
     .result{
         font-size: 16px;
+    }
+
+    .slider-out{
+        width: 228px;
+        margin-left: 37px;
+    }
+
+    .text-items{
+        text-align: center;
+    }
+
+    .slider-panel-latest{
+        left: 75px;
+        top: 448px;
     }
 }

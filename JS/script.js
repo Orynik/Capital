@@ -34,6 +34,60 @@ prew.onclick = function () {
         }
     }
 }
+//Слайдер поступлений
+	var next_item = document.getElementById("next-items");
+	var prew_item = document.getElementById("prew-items");
+    var slider_items = document.querySelector(".slider-items");
+    
+    //Ширина видимого блока
+    var width_visibity_block = document.querySelector(".slider-out").offsetWidth; 
+
+    //Буффер для использования в вычислениях
+    var buffer = width_visibity_block; 
+
+    //Ширина одного слайд-блока
+    var width_slide = document.querySelector(".items-wrapper").offsetWidth; 
+    var swipe = 0; 
+    //Ширина скрытого блока    
+    const width_slider = document.querySelector(".slider-items").offsetWidth;
+
+    //Котнроль ширин
+    console.log("Видимый блок: " + width_visibity_block);
+    console.log("Один слайд-блок:" + width_slide);
+    console.log("Скрытый блок:" + width_slider);
+
+	slider_items.style.transform = "translate3d(-0px, 0px, 0px)";
+	slider_items.style.transition = "all 1s ease 0s";
+
+    console.log("Сумма видимого блока и слайд-блока: " + (buffer + width_slide));
+	
+	next_item.onclick = function(){
+		if(buffer != width_slider){
+			swipe += width_slide;
+			slider_items.style.transform = "translate3d( -" + swipe + "px, 0px, 0px)";
+			buffer += width_slide;
+			prew_item.classList.remove("disabled");
+            next_item.classList.remove("disabled");
+            if(buffer == width_slider){
+                prew_item.classList.remove("disabled");
+                next_item.classList.add("disabled");
+            }
+		}
+	}
+    
+	prew_item.onclick = function(){
+		if(swipe != 0){
+            swipe -= width_slide;
+			slider_items.style.transform = "translate3d(-"+ swipe +"px, 0px, 0px)"
+            buffer -= width_slide;
+			prew_item.classList.remove("disabled");
+            next_item.classList.remove("disabled");
+            if(buffer == width_visibity_block){
+                next_item.classList.remove("disabled");
+                prew_item.classList.add("disabled")
+            }
+		}	
+    }
 
 //Модальное окно
 
