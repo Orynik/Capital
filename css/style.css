@@ -772,11 +772,11 @@ a{
 }
 
 @media (max-width:767px){
-    /* !!!!!!!!!!!!!!!!!!! */
+    /* !!!!!!!!!!!!!!!!!!!
     .main-header,
     .wraper-sm{
         min-width: 100%;
-    }
+    } */
 
     .details-location{
         padding-right: 15px;
