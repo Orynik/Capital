@@ -878,6 +878,13 @@ a{
     }
 }
 
+@media(max-width: 500px){
+    .slider-out{
+        width: 229px;
+        margin-left: 131px;
+    }
+}
+
 @media(max-width: 445px){
     .logo{
         margin-left: 0px;
@@ -915,6 +922,14 @@ a{
 
     .gold-title{
         padding-left: 0;
+    }
+
+    .slider-panel-latest{
+        left: 136px;
+    }
+    
+    .slider-out{
+        margin-left: 86px;
     }
 }
 
