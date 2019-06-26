@@ -206,6 +206,18 @@ a{
     box-shadow: 0px 1px 5px -2px RGBA(0,0,0,0.3);
 }
 
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus, 
+.show > .btn-secondary.dropdown-toggle:focus{
+    box-shadow: inset 0 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary:focus{
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+
 .gold-title,
 .silver-title{
     float: left;
@@ -322,6 +334,8 @@ a{
 
 .items-wrapper{
     border: 1px solid #e4e6ed;
+    width: 227px;
+    padding-top: 40px;
 }
 
 .items{
@@ -494,6 +508,79 @@ a{
     margin-left: 15px;
 }
 
+/* Модальное окно */
+
+.modal {
+	margin: 30px auto;
+	width: 615px;
+	height: 449px;
+	top: -120%;
+	right: 0;
+	background: #fff;
+	border: 1px solid #333;
+	z-index: 9999;
+	transition: all 0.6s ease-out;
+	display: block;
+	-webkit-transition: all 0.6s ease-out;
+	-moz-transition: all 0.6s ease-out;
+	-ms-transition: all 0.6s ease-out;
+	-o-transition: all 0.6s ease-out;
+}
+
+.row-a a{
+	margin-top: 35px;
+	margin-bottom: 0px;
+	margin-left: 15px;
+}
+
+.row-a a:nth-child(2){
+	padding-left: 35px;
+}
+
+.modal-title{
+	margin: auto;
+}
+
+.modal-content{
+	border-bottom: none;
+}
+
+.modal-body .modal-title{
+	margin-top: 40px;
+	padding-left: 13px;
+}
+
+.overflow {
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	background: rgba(0,0,0,0.7); 
+	position: absolute; 
+	top: 0;
+}
+
+.closeBtn {
+	cursor: pointer;
+	float: right;
+	font-size: 30px; 
+	color: black;
+} 
+
+.wrapper_blur{
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.modal a{
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #a75133;
+}
+
 /* Адаптив на lg */
 
 @media (max-width:1199px){
@@ -613,6 +700,7 @@ a{
     ul li.slide img{
         width: 582px;
         height: 412px;
+        margin-left: auto;
     }
 
     .slider-panel {
@@ -646,6 +734,14 @@ a{
 
     .main-footer .right-reserved {
         margin-top: -3px;
+    }
+
+    .row-a a:nth-child(2){
+        padding-left: 15px ;
+    }
+
+    .modal{
+        height: 550px;
     }
 }
 
@@ -714,6 +810,10 @@ a{
     .header-top{
         padding-left: 142px;
     }
+
+    .modal{
+        width: 100%;
+    }
 }
 
 @media(max-width: 627px){
@@ -778,83 +878,51 @@ a{
         padding-left: 0px;
         margin-left: 29px;
     }
+
+    .slider-md-wrap {
+        min-height: 357px;
+    }
+
+    ul li.slide img {
+        width: 46%;
+        height: 267px;
+    }
+
+    .slider-panel{
+        left: 135px;
+        top: 289px;
+    }
 }
 
 @media(max-width: 332px){
     .mobail-menu{
         display: none;
     }
-}
 
-/* Модальное окно */
+    .row-a a {
+        margin-top: 24px;
+    }
 
-.modal {
-	margin: 30px auto;
-	width: 615px;
-	height: 449px;
-	top: -120%;
-	right: 0;
-	background: #fff;
-	border: 1px solid #333;
-	z-index: 9999;
-	transition: all 0.6s ease-out;
-	display: block;
-	-webkit-transition: all 0.6s ease-out;
-	-moz-transition: all 0.6s ease-out;
-	-ms-transition: all 0.6s ease-out;
-	-o-transition: all 0.6s ease-out;
-}
+    .wrapper .navbar-toggler-icon {
+        margin-left: 100px;
+    }
 
-.row-a a{
-	margin-top: 35px;
-	margin-bottom: 0px;
-	margin-left: 15px;
-}
+    ul li.slide img {
+        width: 36%;
+        height: 217px;
+    }
 
-.row-a a:nth-child(2){
-	padding-left: 35px;
-}
+    .slider-md-wrap {
+        min-height: 268px;
+        padding: 0;
+    }
 
-.modal-title{
-	margin: auto;
-}
+    .slider-panel {
+        left: 71px;
+        top: 217px;
+    }
 
-.modal-content{
-	border-bottom: none;
-}
-
-.modal-body .modal-title{
-	margin-top: 40px;
-	padding-left: 13px;
-}
-
-.overflow {
-	width: 100%;
-	height: 100%;
-	z-index: 9998;
-	background: rgba(0,0,0,0.7); 
-	position: absolute; 
-	top: 0;
-}
-
-.closeBtn {
-	cursor: pointer;
-	float: right;
-	font-size: 30px; 
-	color: black;
-} 
-
-.wrapper_blur{
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-}
-
-.modal a{
-	font-size: 22px;
-	line-height: 24px;
-	font-weight: 400;
-	color: #a75133;
+    .ico-basket{
+        margin-left: 14px;
+    }
 }

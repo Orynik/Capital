@@ -41,28 +41,30 @@ var closeBtn = document.querySelector('.closeBtn');
 var modal = document.querySelector('.modal');
 var overflow = document.createElement('div');
 // !!!! класс для добавления блюра
-var wrapper = document.querySelector('.wrapper');
+var wrapper = document.querySelector('.blur');
 // !!!!
+var body = document.querySelector('body');
 var trigger = document.querySelector('.details-location');
 trigger.onclick = function () {
 	overflow.className = "overflow";
     document.body.appendChild(overflow);
 	modal.style.top = "0%";
-	wrapper.classList.add("wrapper_blur");
+    wrapper.classList.add("wrapper_blur");
+    body.style.overflow = 'hidden'; //Убирается прокрутка страницы
 }
-
-
 
 overflow.onclick = function () { //Клик вне области
     modal.style.top = "-100%";
 	wrapper.classList.remove("wrapper_blur"); //Удаление размытия
-	overflow.remove();
+    overflow.remove();
+    body.style.overflow = "scroll";
 }
 
 closeBtn.addEventListener('click', function(){ //Клик по кнопке закрытия
 	modal.style.top = "-100%";
 	wrapper.classList.remove("wrapper_blur") //Удаление размытия
-	overflow.remove();
+    overflow.remove();
+    body.style.overflow = "scroll";
 })
 
 
