@@ -518,20 +518,20 @@ a{
 /* Модальное окно */
 
 .modal {
-	margin: 30px auto;
-	width: 615px;
-	height: 449px;
-	top: -170%;
-	right: 0;
-	background: #fff;
-	border: 1px solid #333;
-	z-index: 9999;
-	transition: all 0.6s ease-out;
-	display: block;
-	-webkit-transition: all 0.6s ease-out;
-	-moz-transition: all 0.6s ease-out;
-	-ms-transition: all 0.6s ease-out;
-	-o-transition: all 0.6s ease-out;
+    margin: 30px auto;
+    width: 615px;
+    height: 449px;
+    top: -170%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #333;
+    z-index: 9999;
+    display: block;
+    transition:all 0.6s ease;
+    -webkit-transition:all 0.6s ease;
+    -moz-transition:all 0.6s ease;
+    -ms-transition:all 0.6s ease;
+    -o-transition:all 0.6s ease;
 }
 
 .row-a a{
@@ -579,6 +579,9 @@ a{
     -o-filter: blur(3px);
     -ms-filter: blur(3px);
     filter: blur(3px);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .modal a{
@@ -772,11 +775,6 @@ a{
 }
 
 @media (max-width:767px){
-    /* !!!!!!!!!!!!!!!!!!!
-    .main-header,
-    .wraper-sm{
-        min-width: 100%;
-    } */
 
     .details-location{
         padding-right: 15px;
@@ -842,6 +840,10 @@ a{
 
     .latest-items{
         margin: 45px auto 113px auto;
+    }
+
+    ul li.slide img{
+        width: 480px;
     }
 }
 
