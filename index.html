@@ -13,13 +13,11 @@
     <header class = "container main-header ">
       <div class = "header-top-wrap">
         <div class = "header-top">
-          <!-- <div class = "wrapper-xl row"> -->
             <i class = "ico-location"></i>
             <span class = "location">Усолье-Сибирское, ул.Менделеева, д.42</span>
               <a class = "details details-location" href = "#"> выбрать отделение</a>
             <span class = "phone">+7 (999) 147 14 14</span>
             <span class = "time-work">Режим работы: пн.-пт. с 10:00 до 19:00</span>
-          <!-- </div> -->
         </div>  
       </div>
       <div class = "header-bottom-wrap">
@@ -53,7 +51,7 @@
       </div>
     </header>
     <main>
-      <div class="container wraper-sm">
+      <div class="container">
         <section class = "our-price-tag row">
           <div class = "col-xl-7 col-lg-6 col-md-12 slider-md-wrap">
             <ul id = "slider">
@@ -80,22 +78,22 @@
                     </div>
                 </form>
                 <div class = "row calc-buttons">
-                  <div class = "col-9">
+                  <div class = "col-9 buttons-probe">
                     <span class = "col-12 gold-title">Укажите пробу золота</span>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button" selected>375</button>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button">583</button>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button">585</button>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button">750</button>
+                    <button class = "col-3 btn btn-secondary gold-button" type = "button" id = "375">375</button>
+                    <button class = "col-3 btn btn-secondary gold-button" type = "button" id = "583">583</button>
+                    <button class = "col-3 btn btn-secondary gold-button" type = "button" id = "585">585</button>
+                    <button class = "col-3 btn btn-secondary gold-button active" type = "button" id = "750">750</button>
                   </div>
-                  <div class = "col-3">
+                  <div class = "col-3 buttons-probe">
                     <span class = "col-12 silver-title">Серебро</span>
-                    <button class = "col-12 btn btn-secondary silver-button" type = "button">925</button>
+                    <button class = "col-12 btn btn-secondary silver-button" type = "button" id = "925">925</button>
                   </div>
                 </div>
                 <div class="row">
-                  <div class = "col-12">
-                    <button class="col-6 btn btn-secondary quality" type = "button">Ликвидное</button>
-                    <button class="col-6 btn btn-secondary quality" type = "button">Лом</button>
+                  <div class = "col-12 buttons-quality">
+                    <button class="col-6 btn btn-secondary quality" type = "button" id = "liquid">Ликвидное</button>
+                    <button class="col-6 btn btn-secondary quality active" type = "button" id = "scrap">Лом</button>
                   </div>
                 </div>
               </div>
@@ -164,7 +162,7 @@
             </div>
           </section>
         </div>
-      <div class = "container wraper-sm">
+      <div class = "container">
         <section class = "how-we-work сontainer">
           <h4 class = "how-we-work-title">Как мы работаем</h4>
           <section class = "steps-work row text-center">
@@ -209,7 +207,7 @@
           </section>
         </section>
       </div>
-      <div class = "container wraper-sm">
+      <div class = "container">
         <section class = "about-us">
           <h4 class = "about-us-title">О компании</h4>
           <p class = "about-us-description">
@@ -223,7 +221,7 @@
       </div>
     </main>
     <footer class = "main-footer">
-      <div class="container wraper-sm">
+      <div class="container">
         <div class = "right-reserved"> 
           <ul class = "nav navbar-nav">
             <li class="footer-navbar-item"><a href="#">О нас</a></li>

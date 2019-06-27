@@ -1,4 +1,86 @@
 "use strict";
+//Калькулятор
+
+var input = document.querySelector(".weight-item");
+
+var g_375 = document.getElementById("375");
+var g_583 = document.getElementById("583");
+var g_585 = document.getElementById("585");
+var g_750 = document.getElementById("750");
+var g_925 = document.getElementById("925");
+
+var liquid = document.getElementById("liquid");
+var scrap = document.getElementById("scrap");
+
+var input_value = 0;
+var calc_probe = 1800;
+var calc_quality = 2;
+
+var result = document.getElementById("result");
+
+g_375.onclick = function(){
+    calc_probe = 900;
+    remove_active_simple(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+g_583.onclick = function(){
+    calc_probe = 1200;
+    remove_active_simple(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+g_585.onclick = function(){
+    calc_probe = 1600;
+    remove_active_simple(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+g_750.onclick = function(){
+    calc_probe = 1800;
+    remove_active_simple(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+g_925.onclick = function(){
+    calc_probe = 2300;
+    remove_active_simple(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+liquid.onclick = function(){
+    calc_quality = 4;
+    remove_active_quality(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+scrap.onclick = function(){
+    calc_quality = 2;
+    remove_active_quality(this);
+    calculate(input_value,calc_probe,calc_quality);
+}
+
+
+function remove_active_simple(elem){
+    document.querySelectorAll('.buttons-probe .active').forEach(n => n.classList.remove('active')) //Удаляет класс active у дочерних элементов buttons-probe
+    elem.classList.add("active");
+}
+
+input.oninput = function() {
+    input_value = input.value; //Запись изменения поля input
+    calculate(input_value,calc_probe,calc_quality);
+};
+
+function remove_active_quality(elem){
+    document.querySelectorAll('.buttons-quality .active').forEach(n => n.classList.remove('active'))
+    elem.classList.add("active");
+}
+
+function calculate (weight, probe, quality){
+    var calc_result = weight * probe * quality;
+    result.innerHTML = calc_result;
+}
+
 // Слайдер 
 var next = document.getElementById('next');
 var prew = document.getElementById('prew');
@@ -34,6 +116,7 @@ prew.onclick = function () {
         }
     }
 }
+
 //Слайдер поступлений
 	var next_item = document.getElementById("next-items");
 	var prew_item = document.getElementById("prew-items");
