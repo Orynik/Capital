@@ -614,6 +614,108 @@ a{
     width: 1368px;
     height: 100%;
 }
+/* Меню на 992px */
+
+.wraper{
+    width: 320px;
+    position: relative;
+    color: #a75133;
+    text-align: center;
+    height: 40px;
+}
+
+#check-menu{
+    display: none;
+}
+
+.wraper label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+    margin-left: 51px;
+    margin-top: -3px;
+}
+
+.burger-line{
+    position: absolute;
+    top: 8px;
+    left: 250px;
+    width: 35px;
+    height: 2px;
+    background-color: #a75133;
+    transition: .5s all;
+}
+
+.second, .third{
+    top: 18px;
+}
+
+.fourth{
+    top: 28px;
+}
+
+.main-menu{
+    display: block;
+    position: absolute;
+    padding-top: 10px;
+    /*width: 100%;
+    */bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+    margin-left: 14px;
+    width: 134%;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+    z-index: 10;
+}
+
+.wraper a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #a75133;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background-color: #fff;
+}
+
+a:hover{
+    background-color: #c1c1c1;
+}
+
+#check-menu:checked ~ .main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+
 
 /* Адаптив на lg */
 
@@ -704,7 +806,9 @@ a{
     }
 
     .wrapper{
-        padding-top: 29px;
+        width: 100%;
+        margin-top: 0px;
+        padding-top: 22px;
     }
 
     .mobail-menu{
@@ -717,6 +821,8 @@ a{
 
     .basket{
         margin: 0;
+        padding-top: 7px;
+        height: 31px;
     }
 
     .wrapper .navbar-toggler-icon{
@@ -775,7 +881,6 @@ a{
 }
 
 @media (max-width:767px){
-
     .details-location{
         padding-right: 15px;
     }
@@ -845,6 +950,10 @@ a{
     ul li.slide img{
         width: 480px;
     }
+
+    .burger-line{
+        left: 190px;
+    }
 }
 
 @media(max-width: 627px){
@@ -884,6 +993,18 @@ a{
     .slider-out{
         width: 229px;
         margin-left: 131px;
+    }
+}
+
+@media(max-width: 527px){
+    .burger-line{
+        left: 175px;
+    }
+}
+
+@media(max-width: 471px){
+    .burger-line{
+        left: 160px;
     }
 }
 
@@ -932,6 +1053,13 @@ a{
     
     .slider-out{
         margin-left: 86px;
+    }
+
+    .burger-line{
+        left: 164px;
+    }
+    .mobail-menu{
+        display: none;
     }
 }
 
@@ -983,5 +1111,11 @@ a{
     .slider-panel-latest{
         left: 75px;
         top: 448px;
+    }
+}
+
+@media(max-width: 269px){
+    .burger-line{
+        left: 134px;
     }
 }
