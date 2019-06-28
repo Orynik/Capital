@@ -619,7 +619,6 @@ a{
 .wraper{
     width: 320px;
     position: relative;
-    color: #a75133;
     text-align: center;
     height: 40px;
 }
@@ -648,7 +647,6 @@ a{
     left: 250px;
     width: 35px;
     height: 2px;
-    background-color: #a75133;
     transition: .5s all;
 }
 
@@ -669,7 +667,6 @@ a{
     left: 0;
     transform: translateY(100%);
     max-height: 0;
-    font-size: 0;
     overflow: hidden;
     transition: .5s all;
     margin-left: 14px;
@@ -685,19 +682,9 @@ a{
     display: block;
     width: 100%;
     padding: 10px;
-    color: #a75133;
     text-decoration: none;
     border-top: 1px solid rgba(255,255,255,.3);
     background-color: #fff;
-}
-
-a:hover{
-    background-color: #c1c1c1;
-}
-
-#check-menu:checked ~ .main-menu{
-    max-height: 500px;
-    font-size: 16px;
 }
 
 #check-menu:checked ~ .first{
@@ -978,10 +965,6 @@ a:hover{
 
     .slider-panel{
         left: 144px;
-    }
-
-    .items > .items-wrapper:nth-child(3){ /*Заменить, иначе не будет работать слайдер*/
-        display: none;
     }
 
     .copyright{

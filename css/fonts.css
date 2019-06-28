@@ -207,3 +207,30 @@ body{
 	font-weight: 400;
 	color: #a75133;
 }
+
+.mobail-menu{
+    font-family: "MyriadPro-Regular";
+    font-size: 20px;
+    color: var(--brown);
+}
+
+.wraper a{
+    font-family: "MyriadPro-Regular";
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--brown);
+}
+
+.wraper a:hover{
+    background-color: #c1c1c1;
+}
+
+
+#check-menu:checked ~ .main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+
+.burger-line{
+    background-color: #a75133;
+}
