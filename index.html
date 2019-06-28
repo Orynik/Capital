@@ -73,8 +73,9 @@
                 <h2 class = "title-price">Расчет суммы займа</h2>
                 <form role="form">
                     <div class="input-group">
-                        <input type="text" class="form-control weight-item"  id="weight" placeholder="Укажите вес изделия">
+                        <input type="text" class="form-control weight-item"  id="weight" placeholder="Укажите вес изделия" pattern = "\d+(\.\d{2})?">
                         <label for="weight" class="input-group-addon"><span >гр.</span></label>
+                        <span class = "error col-12 text-center"></span>
                     </div>
                 </form>
                 <div class = "row calc-buttons">

@@ -17,6 +17,7 @@ var calc_probe = 1800;
 var calc_quality = 2;
 
 var result = document.getElementById("result");
+var error = document.querySelector(".error");
 
 g_375.onclick = function(){
     calc_probe = 900;
@@ -71,15 +72,22 @@ function remove_active_quality(elem){
     elem.classList.add("active");
 }
 
-//Вывод данных с input
+//Вывод данных с input и валидация данных
 input.oninput = function() {
-    input_value = input.value;
-    calculate(input_value,calc_probe,calc_quality);
+    if(isNaN(input.value) || input.value <= 0){
+        result.innerHTML = 0;
+        var text_error = "Ошибка, введите корректное число"
+        error.innerHTML = text_error;
+    }if(!isNaN(input.value) || input.value == ""){
+        error.innerHTML = "";
+        input_value = input.value;
+        calculate(input_value,calc_probe,calc_quality);
+    }
 };
 
 
 function calculate (weight, probe, quality){
-    var calc_result = weight * probe * quality;
+    var calc_result = Math.round(weight * probe * quality);
     result.innerHTML = calc_result;
 }
 
