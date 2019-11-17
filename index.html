@@ -96,20 +96,20 @@
                 <div class = "row calc-buttons">
                   <div class = "col-9 buttons-probe">
                     <span class = "col-12 gold-title">Укажите пробу золота</span>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button" id = "375">375</button>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button" id = "583">583</button>
-                    <button class = "col-3 btn btn-secondary gold-button" type = "button" id = "585">585</button>
-                    <button class = "col-3 btn btn-secondary gold-button active" type = "button" id = "750">750</button>
+                    <button class = "col-3 btn btn-secondary gold-button" type = "button" onclick="simple(innerHTML)" id = "375">375</button>
+                    <button class = "col-3 btn btn-secondary gold-button" type = "button" onclick="simple(innerHTML)" id = "583">583</button>
+                    <button class = "col-3 btn btn-secondary gold-button" type = "button" onclick="simple(innerHTML)" id = "585">585</button>
+                    <button class = "col-3 btn btn-secondary gold-button active" type = "button" onclick="simple(innerHTML)" id = "750">750</button>
                   </div>
                   <div class = "col-3 buttons-probe">
                     <span class = "col-12 silver-title">Серебро</span>
-                    <button class = "col-12 btn btn-secondary silver-button" type = "button" id = "925">925</button>
+                    <button class = "col-12 btn btn-secondary silver-button" type = "button" id = "925" onclick="simple(innerHTML)">925</button>
                   </div>
                 </div>
                 <div class="row">
                   <div class = "col-12 buttons-quality">
-                    <button class="col-6 btn btn-secondary quality" type = "button" id = "liquid">Ликвидное</button>
-                    <button class="col-6 btn btn-secondary quality active" type = "button" id = "scrap">Лом</button>
+                    <button class="col-6 btn btn-secondary quality" type = "button" id = "liquid" onclick = "quality(id)">Ликвидное</button>
+                    <button class="col-6 btn btn-secondary quality active" type = "button" id = "scrap" onclick = "quality(id)">Лом</button>
                   </div>
                 </div>
               </div>
@@ -183,7 +183,7 @@
           <h4 class = "how-we-work-title">Как мы работаем</h4>
           <section class = "steps-work row text-center">
             <div class = "step col-lg-3 col-6">
-              <img class = "step-img" alt = "Деньги" src = "img/time-money.png">
+              <img class = "step-img" alt = "Деньги" src = "img/time-money.png" height = "58" width = "128">
               <p class = "text-step">
                 Вам срочно нужны деньги 
                 на короткий срок и у вас
@@ -192,7 +192,7 @@
               </p>
             </div>
             <div class = "step col-lg-3 col-6">
-              <img class = "step-img" alt = "Ломбард" src = "img/pawnshop.png">
+              <img class = "step-img" alt = "Ломбард" src = "img/pawnshop.png" height = "58" width = "128">
               <p class = "text-step">
                 Вы обращаетесь в наш ломбард,
                 мы оценивает стоимость вашего
@@ -202,7 +202,7 @@
               </p>
             </div>
             <div class = "step col-lg-3 col-6">
-              <img class = "step-img" alt = "list" src = "img/list.png">
+              <img class = "step-img" alt = "list" src = "img/list.png" height = "58" width = "128">
               <p class = "text-step">
                 Если вас устраивают наши
                 условия, мы подписываем договор
@@ -212,7 +212,7 @@
               </p>
             </div>
             <div class = "step col-lg-3 col-6">
-              <img class = "step-img" alt = "Украшение" src = "img/jewel.png">
+              <img class = "step-img" alt = "Украшение" src = "img/jewel.png" height = "58" width = "128">
               <p class = "text-step fixed">
                 Через 30 дней вы возвращаете
                 нам взятую сумму + проценты

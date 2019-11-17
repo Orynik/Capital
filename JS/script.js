@@ -3,73 +3,92 @@
 
 var input = document.querySelector(".weight-item");
 
-var g_375 = document.getElementById("375");
-var g_583 = document.getElementById("583");
-var g_585 = document.getElementById("585");
-var g_750 = document.getElementById("750");
-var g_925 = document.getElementById("925");
+let input_value = 0;
+let calc_probe = 1800;
+let calc_quality = 2;
+let error = document.querySelector(".error");
 
-var liquid = document.getElementById("liquid");
-var scrap = document.getElementById("scrap");
+//Объекты для расчета значений
+let arrOfSimple = [
+    {
+        simple: 375,
+        value: 900
+    },
+    {
+        simple: 583,
+        value: 1200
+    },
+    {
+        simple: 585,
+        value: 1600
+    },
+    {
+        simple: 750,
+        value: 1800
+    },
+    {
+        simple: 925,
+        value: 2300
+    }
+];
 
-var input_value = 0;
-var calc_probe = 1800;
-var calc_quality = 2;
+let arrOfQuality = [
+    {
+        name: 'liquid',
+        value: 2
+    },
+    {
+        name: 'scrap',
+        value: 4
+    }
+];
 
-var result = document.getElementById("result");
-var error = document.querySelector(".error");
-
-g_375.onclick = function(){
-    calc_probe = 900;
-    remove_active_simple(this);
+//Поиск, добавление/удаление класса, расчет стоимости
+function simple(val){
+    defenitionSimple(val);
+    changeSimple(val);
     calculate(input_value,calc_probe,calc_quality);
 }
 
-g_583.onclick = function(){
-    calc_probe = 1200;
-    remove_active_simple(this);
+function quality(val){
+    defenitionQuality(val);
+    changeQuality(val);
     calculate(input_value,calc_probe,calc_quality);
 }
 
-g_585.onclick = function(){
-    calc_probe = 1600;
-    remove_active_simple(this);
-    calculate(input_value,calc_probe,calc_quality);
+//Перезапись текущего значение в соответсвии с нажатой кнопкой
+
+function defenitionQuality(val){
+    arrOfQuality.forEach(item => {
+        if(item.name == val){
+            calc_quality = item.value;
+        }
+    })
 }
 
-g_750.onclick = function(){
-    calc_probe = 1800;
-    remove_active_simple(this);
-    calculate(input_value,calc_probe,calc_quality);
-}
-
-g_925.onclick = function(){
-    calc_probe = 2300;
-    remove_active_simple(this);
-    calculate(input_value,calc_probe,calc_quality);
-}
-
-liquid.onclick = function(){
-    calc_quality = 4;
-    remove_active_quality(this);
-    calculate(input_value,calc_probe,calc_quality);
-}
-
-scrap.onclick = function(){
-    calc_quality = 2;
-    remove_active_quality(this);
-    calculate(input_value,calc_probe,calc_quality);
+function defenitionSimple(val){
+    arrOfSimple.forEach(item => {
+        if(item.simple == val){
+            calc_probe = item.value;
+        }
+    });
 }
 
 //Удаление active с других кнопок и дбавление на нажатую
-function remove_active_simple(elem){
+function changeSimple(elem){
     document.querySelectorAll('.buttons-probe .active').forEach(n => n.classList.remove('active')) 
-    elem.classList.add("active");
+    document.getElementById(elem).classList.add("active");
 }
 
-function remove_active_quality(elem){
+function changeQuality(elem){
     document.querySelectorAll('.buttons-quality .active').forEach(n => n.classList.remove('active'))
-    elem.classList.add("active");
+    document.getElementById(elem).classList.add("active");
+}
+
+//Расчет стоимости
+function calculate (weight, probe, quality){
+    var calc_result = Math.round(weight * probe * quality);
+    document.getElementById("result").innerHTML = calc_result;
 }
 
 //Вывод данных с input и валидация данных
@@ -84,12 +103,6 @@ input.oninput = function() {
         calculate(input_value,calc_probe,calc_quality);
     }
 };
-
-
-function calculate (weight, probe, quality){
-    var calc_result = Math.round(weight * probe * quality);
-    result.innerHTML = calc_result;
-}
 
 // Слайдер 
 var next = document.getElementById('next');
@@ -128,6 +141,7 @@ prew.onclick = function () {
 }
 
 //Слайдер поступлений
+
 var next_item = document.getElementById("next-items");
 var prew_item = document.getElementById("prew-items");
 var slider_items = document.querySelector(".slider-items");
